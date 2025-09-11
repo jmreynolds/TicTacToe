@@ -1,8 +1,8 @@
 namespace TicTacToe
 {
-    public partial class Form1 : Form
+    public partial class GameBoard : Form
     {
-        public Form1()
+        public GameBoard()
         {
             InitializeComponent();
         }
