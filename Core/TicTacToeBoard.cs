@@ -52,6 +52,7 @@
                 && Cells[0, 2].Value == Cells[1, 1].Value 
                 && Cells[1, 1].Value == Cells[2, 0].Value)
                 return Cells[0, 2].Value;
+            return ' '; // No winner
         }
     }
 }
