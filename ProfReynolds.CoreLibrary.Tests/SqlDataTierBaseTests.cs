@@ -3,6 +3,8 @@
  * last review 2024-01-28
  */
 
+using Shouldly;
+
 namespace ProfReynolds.CoreLibrary.Tests;
 
 
