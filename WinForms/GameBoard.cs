@@ -1,4 +1,6 @@
 
+using NsqSharp;
+
 namespace TicTacToe
 {
     public partial class GameBoard : Form
@@ -6,6 +8,9 @@ namespace TicTacToe
         public GameBoard()
         {
             InitializeComponent();
+            var producer = new Producer("127.0.0.1:4161");
+            producer.Publish("test-topic-name", "Hello from TicTacToe!");
+            producer.Stop();
 
             btnExit.Click += (s, e) => Application.Exit();
             // Duplicate the button and set properties for a 3x3 grid
@@ -43,6 +48,8 @@ namespace TicTacToe
             {
                 button.Text = "X"; // Example action: set text to "X" on click
             }
+
+
         }
     }
 }
