@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Assets/nsqd.436.dat
+/Assets/test-topic-name.diskqueue.meta.dat
+/Assets/test-topic-name;channel-name.diskqueue.meta.dat
+/Assets/TicTacToe.diskqueue.meta.dat
+/Assets/TicTacToe;channel-name.diskqueue.meta.dat
