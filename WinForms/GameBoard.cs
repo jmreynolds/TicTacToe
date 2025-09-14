@@ -8,10 +8,6 @@ namespace TicTacToe
         public GameBoard()
         {
             InitializeComponent();
-            var producer = new Producer("127.0.0.1:4161");
-            producer.Publish("test-topic-name", "Hello from TicTacToe!");
-            producer.Stop();
-
             btnExit.Click += (s, e) => Application.Exit();
             // Duplicate the button and set properties for a 3x3 grid
             int buttonSize = 250;
@@ -47,7 +43,11 @@ namespace TicTacToe
             if (button != null)
             {
                 button.Text = "X"; // Example action: set text to "X" on click
+                var producer = new Producer("127.0.0.1:4150");
+                producer.Publish("TicTacToe", button.Text);
+                producer.Stop();
             }
+
 
 
         }

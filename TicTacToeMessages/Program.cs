@@ -4,26 +4,20 @@ using System.Text;
 using NsqSharp;
 
 
-internal class Program
-{
-    private static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
+Console.WriteLine("Hello, World!");
 
 
-        // Create a new Consumer for each topic/channel
-        var consumer = new Consumer("test-topic-name", "channel-name");
-        consumer.AddHandler(new MessageHandler());
-        consumer.ConnectToNsqLookupd("127.0.0.1:4161");
+// Create a new Consumer for each topic/channel
+var consumer = new Consumer("TicTacToe", "channel-name");
+consumer.AddHandler(new MessageHandler());
+consumer.ConnectToNsqLookupd("127.0.0.1:4161");
 
-        Console.WriteLine("Listening for messages. If this is the first execution, it " +
-                          "could take up to 60s for topic producers to be discovered.");
-        Console.WriteLine("Press enter to stop...");
-        Console.ReadLine();
+Console.WriteLine("Listening for messages. If this is the first execution, it " +
+                  "could take up to 60s for topic producers to be discovered.");
+Console.WriteLine("Press enter to stop...");
+Console.ReadLine();
 
-        consumer.Stop();
-    }
-}
+consumer.Stop();
 
 public class MessageHandler : IHandler
 {
