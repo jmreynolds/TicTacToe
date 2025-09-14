@@ -6,5 +6,10 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        private void GameBoard_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

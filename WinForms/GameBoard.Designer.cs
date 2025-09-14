@@ -36,9 +36,10 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(12, 403);
+            btnExit.Location = new Point(34, 1290);
+            btnExit.Margin = new Padding(9, 10, 9, 10);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(121, 35);
+            btnExit.Size = new Size(346, 112);
             btnExit.TabIndex = 0;
             btnExit.Text = "Exit Tic Tac Toe";
             btnExit.UseVisualStyleBackColor = true;
@@ -47,32 +48,34 @@
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
             panel1.Controls.Add(btnCell00);
-            panel1.Location = new Point(34, 39);
+            panel1.Location = new Point(97, 125);
+            panel1.Margin = new Padding(9, 10, 9, 10);
             panel1.Name = "panel1";
-            panel1.Size = new Size(319, 321);
+            panel1.Size = new Size(904, 1018);
             panel1.TabIndex = 3;
             // 
             // btnCell00
             // 
             btnCell00.Font = new Font("Comic Sans MS", 27.75F);
-            btnCell00.Location = new Point(13, 15);
+            btnCell00.Location = new Point(37, 48);
+            btnCell00.Margin = new Padding(9, 10, 9, 10);
             btnCell00.Name = "btnCell00";
-            btnCell00.Size = new Size(94, 94);
+            btnCell00.Size = new Size(269, 301);
             btnCell00.TabIndex = 2;
             btnCell00.Text = "?";
             btnCell00.UseVisualStyleBackColor = true;
             // 
             // GameBoard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(20F, 48F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(2286, 1440);
             Controls.Add(panel1);
             Controls.Add(btnExit);
-            Margin = new Padding(1);
             Name = "GameBoard";
             Text = "Tic Tac Toe";
+            Load += GameBoard_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -82,5 +85,6 @@
         private Button btnExit;
         private Panel panel1;
         private Button btnCell00;
+        
     }
 }
