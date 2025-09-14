@@ -28,130 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ticTacToeGrid = new TableLayoutPanel();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            ticTacToeGrid.SuspendLayout();
+            btnExit = new Button();
+            panel1 = new Panel();
+            btnCell00 = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // ticTacToeGrid
+            // btnExit
             // 
-            ticTacToeGrid.ColumnCount = 3;
-            ticTacToeGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333321F));
-            ticTacToeGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
-            ticTacToeGrid.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.3333359F));
-            ticTacToeGrid.Controls.Add(textBox1, 0, 0);
-            ticTacToeGrid.Controls.Add(textBox2, 1, 0);
-            ticTacToeGrid.Controls.Add(textBox3, 2, 0);
-            ticTacToeGrid.Controls.Add(textBox4, 0, 1);
-            ticTacToeGrid.Controls.Add(textBox5, 1, 1);
-            ticTacToeGrid.Controls.Add(textBox6, 2, 1);
-            ticTacToeGrid.Controls.Add(textBox7, 0, 2);
-            ticTacToeGrid.Controls.Add(textBox8, 1, 2);
-            ticTacToeGrid.Controls.Add(textBox9, 2, 2);
-            ticTacToeGrid.Location = new Point(83, 52);
-            ticTacToeGrid.Name = "ticTacToeGrid";
-            ticTacToeGrid.RowCount = 3;
-            ticTacToeGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            ticTacToeGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            ticTacToeGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            ticTacToeGrid.Size = new Size(1182, 635);
-            ticTacToeGrid.TabIndex = 0;
+            btnExit.Location = new Point(12, 403);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(121, 35);
+            btnExit.TabIndex = 0;
+            btnExit.Text = "Exit Tic Tac Toe";
+            btnExit.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // panel1
             // 
-            textBox1.Location = new Point(3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(300, 55);
-            textBox1.TabIndex = 0;
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(btnCell00);
+            panel1.Location = new Point(34, 39);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(319, 321);
+            panel1.TabIndex = 3;
             // 
-            // textBox2
+            // btnCell00
             // 
-            textBox2.Location = new Point(396, 3);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(300, 55);
-            textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(790, 3);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(300, 55);
-            textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(3, 214);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(300, 55);
-            textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(396, 214);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(300, 55);
-            textBox5.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(790, 214);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(300, 55);
-            textBox6.TabIndex = 5;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(3, 425);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(300, 55);
-            textBox7.TabIndex = 6;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(396, 425);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(300, 55);
-            textBox8.TabIndex = 7;
-            // 
-            // textBox9
-            // 
-            textBox9.Location = new Point(790, 425);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(300, 55);
-            textBox9.TabIndex = 8;
+            btnCell00.Font = new Font("Comic Sans MS", 27.75F);
+            btnCell00.Location = new Point(13, 15);
+            btnCell00.Name = "btnCell00";
+            btnCell00.Size = new Size(94, 94);
+            btnCell00.TabIndex = 2;
+            btnCell00.Text = "?";
+            btnCell00.UseVisualStyleBackColor = true;
             // 
             // GameBoard
             // 
-            AutoScaleDimensions = new SizeF(20F, 48F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1431, 716);
-            Controls.Add(ticTacToeGrid);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(800, 450);
+            Controls.Add(panel1);
+            Controls.Add(btnExit);
+            Margin = new Padding(1);
             Name = "GameBoard";
             Text = "Tic Tac Toe";
-            ticTacToeGrid.ResumeLayout(false);
-            ticTacToeGrid.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private TableLayoutPanel ticTacToeGrid;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private Button btnExit;
+        private Panel panel1;
+        private Button btnCell00;
     }
 }
