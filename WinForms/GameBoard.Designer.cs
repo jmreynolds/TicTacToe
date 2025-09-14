@@ -60,7 +60,7 @@
             btnCell00.Location = new Point(37, 48);
             btnCell00.Margin = new Padding(9, 10, 9, 10);
             btnCell00.Name = "btnCell00";
-            btnCell00.Size = new Size(269, 301);
+            btnCell00.Size = new Size(250, 250);
             btnCell00.TabIndex = 2;
             btnCell00.Text = "?";
             btnCell00.UseVisualStyleBackColor = true;
@@ -75,7 +75,6 @@
             Controls.Add(btnExit);
             Name = "GameBoard";
             Text = "Tic Tac Toe";
-            Load += GameBoard_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
