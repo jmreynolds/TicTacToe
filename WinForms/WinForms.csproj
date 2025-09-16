@@ -8,8 +8,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NsqSharp" Version="0.5.4" />
-  </ItemGroup>
-
 </Project>

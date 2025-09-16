@@ -16,6 +16,10 @@ namespace Core
                 }
             }
         }
+
+        // MER 2025-0-16
+        // 'mark' is an interesting parameter name. suggest CellOwner (singular)
+        // according to uSoft, property names are capitalized, but ReSharper is different
         public bool PlaceMark(int row, int column, CellOwners mark)
         {
             if (row < 0 
@@ -31,6 +35,17 @@ namespace Core
             Cells[row, column].Value = mark;
             return true;
         }
+        /* MER 2025-09-16
+            the you can use this: (my syntax may be slightly incorrect)
+            var demo = AlternatePlaceMark(new()
+            { //RowID = 0, //ColID = 0, CellOwner = CellOwners.Error } );
+
+        public bool AlternatePlaceMark(TicTacToeCell cell)
+        {
+            return false;
+        }
+        */
+
         public bool PlaceComputerMark(CellOwners mark)
         {
             var emptyCells = new List<TicTacToeCell>();

@@ -12,11 +12,16 @@ namespace Core
 
         // MER 2025-09-14 used the TicTacToe_Interfaces
         // I prefer to use Value within a property set
+
+        // MER 2025-09-16 --- I think you are redundant here (Value and CellOwner).
+        // I don't to use Value because it is part of C#'s property setting logic
+        // suggest you use CellOwner, not Value
         public CellOwners Value { get; set; } // CellOwners.Human, CellOwners.Computer, or ' ' for empty
-        public int RowID { get; set; }
-        public int ColID { get; set; }
+        public int RowID { get; init; } // MER 2025-09-16 use init instead of set when the property is immutable
+        public int ColID { get; init; } // MER 2025-09-16 changed set to init
         public CellOwners CellOwner { get ; set; }
 
+        // MER 2025-09-16 do you need this? Use property initializers
         public TicTacToeCell(int row, int column)
         {
             RowID = row;
