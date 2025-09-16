@@ -12,7 +12,7 @@ namespace TicTacToe
             // MER 2025-09-14 - many changes here
             panel1.Controls.Remove(btnCellToBeDeleted);
             
-            int buttonSize = 100;
+            int buttonSize = 250;
             for (int row = 0; row < 3; row++)
             {
                 for (int col = 0; col < 3; col++)
