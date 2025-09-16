@@ -13,6 +13,9 @@ namespace TicTacToe_Interfaces
         /// </summary>
         string PlayerName { get; set; }
 
+        /// <summary>
+        /// clear the playing surface; leaves the ancillary fields (PlayerName) unchanged
+        /// </summary>
         void ResetGrid();
 
         /// <summary>

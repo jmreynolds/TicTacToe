@@ -8,15 +8,16 @@ namespace TicTacToe
         public GameBoard()
         {
             InitializeComponent();
-            btnExit.Click += (s, e) => Application.Exit();
-            // Duplicate the button and set properties for a 3x3 grid
-            int buttonSize = 250;
+
+            // MER 2025-09-14 - many changes here
+            panel1.Controls.Remove(btnCellToBeDeleted);
+            
+            int buttonSize = 100;
             for (int row = 0; row < 3; row++)
             {
                 for (int col = 0; col < 3; col++)
                 {
-                    if (row == 0 && col == 0) continue; // Skip the first button, already created
-                    Button newButton = new Button
+                    Button newButton = new()
                     {
                         Font = new Font("Comic Sans MS", 27.75F),
                         Size = new Size(buttonSize, buttonSize),
@@ -24,13 +25,12 @@ namespace TicTacToe
                         Name = $"btnCell{row}{col}",
                         Tag = (row, col), // Store row and column in Tag for later use
                         Text = "?",
-                        UseVisualStyleBackColor = true  
+                        UseVisualStyleBackColor = true
 
                     };
                     panel1.Controls.Add(newButton);
                 }
             }
-            btnCell00.Tag = (0, 0); // Set Tag for the first button 
             foreach (Button btn in panel1.Controls.OfType<Button>())
             {
                 btn.Click += Cell_Click;
@@ -47,6 +47,11 @@ namespace TicTacToe
 
 
 
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
