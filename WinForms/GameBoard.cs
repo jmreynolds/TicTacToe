@@ -1,5 +1,5 @@
 
-using NsqSharp;
+
 
 namespace TicTacToe
 {
@@ -43,9 +43,6 @@ namespace TicTacToe
             if (button != null)
             {
                 button.Text = "X"; // Example action: set text to "X" on click
-                var producer = new Producer("127.0.0.1:4150");
-                producer.Publish("TicTacToe", button.Text);
-                producer.Stop();
             }
 
 
