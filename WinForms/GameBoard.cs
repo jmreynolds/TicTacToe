@@ -11,7 +11,7 @@ namespace TicTacToe
 
             // MER 2025-09-14 - many changes here
             panel1.Controls.Remove(btnCellToBeDeleted);
-            
+
             int buttonSize = 250;
             for (int row = 0; row < 3; row++)
             {
@@ -49,9 +49,28 @@ namespace TicTacToe
 
         }
 
+        // MER 2025-09-17
+        private void btnResetGame_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+        }
+
+        // MER 2025-09-17
+        private void btnComputerMove_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+        }
+
+        // MER 2025-09-17
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            var button = sender as Button;
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }

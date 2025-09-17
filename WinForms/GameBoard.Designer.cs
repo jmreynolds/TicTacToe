@@ -31,6 +31,9 @@
             btnExit = new Button();
             panel1 = new Panel();
             btnCellToBeDeleted = new Button();
+            btnAbout = new Button();
+            btnComputerMove = new Button();
+            btnResetGame = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,12 +66,45 @@
             btnCellToBeDeleted.Text = "this is an example; it will be removed";
             btnCellToBeDeleted.UseVisualStyleBackColor = true;
             // 
+            // btnAbout
+            // 
+            btnAbout.Location = new Point(12, 362);
+            btnAbout.Name = "btnAbout";
+            btnAbout.Size = new Size(121, 35);
+            btnAbout.TabIndex = 4;
+            btnAbout.Text = "About";
+            btnAbout.UseVisualStyleBackColor = true;
+            btnAbout.Click += btnAbout_Click;
+            // 
+            // btnComputerMove
+            // 
+            btnComputerMove.Location = new Point(12, 321);
+            btnComputerMove.Name = "btnComputerMove";
+            btnComputerMove.Size = new Size(121, 35);
+            btnComputerMove.TabIndex = 5;
+            btnComputerMove.Text = "Computer Move";
+            btnComputerMove.UseVisualStyleBackColor = true;
+            btnComputerMove.Click += btnComputerMove_Click;
+            // 
+            // btnResetGame
+            // 
+            btnResetGame.Location = new Point(12, 280);
+            btnResetGame.Name = "btnResetGame";
+            btnResetGame.Size = new Size(121, 35);
+            btnResetGame.TabIndex = 6;
+            btnResetGame.Text = "Reset Game";
+            btnResetGame.UseVisualStyleBackColor = true;
+            btnResetGame.Click += btnResetGame_Click;
+            // 
             // GameBoard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(800, 444);
+            Controls.Add(btnResetGame);
+            Controls.Add(btnComputerMove);
+            Controls.Add(btnAbout);
             Controls.Add(panel1);
             Controls.Add(btnExit);
             Margin = new Padding(1);
@@ -83,6 +119,8 @@
         private Button btnExit;
         private Panel panel1;
         private Button btnCellToBeDeleted;
-        
+        private Button btnAbout;
+        private Button btnComputerMove;
+        private Button btnResetGame;
     }
 }
